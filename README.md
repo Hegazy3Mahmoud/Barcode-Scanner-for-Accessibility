@@ -24,8 +24,14 @@ Through the use of QR codes and barcodes, this tool enables users to receive det
 3. **Fetching Data**: Depending on the mode of operation, the system either queries an online API or looks up product information from a local data file.
 4. **Text-to-Speech**: The retrieved product details are spoken out loud to the user.
 
+## Flask-Based API Implementation
+
+This implementation involves a Flask-based web service that processes QR code data. It decodes the QR code from a base64-encoded string, fetches product details from an API, and uses text-to-speech to relay the information.
+
 ## Setup
 
 1. **Install Required Libraries**:
    ```bash
-   pip install opencv-python pyzbar pyttsx3 pandas requests
+   pip install opencv-python pyzbar pyttsx3 pandas requests flask
+
+2. Send POST Request: You can test the API by sending a POST request to /process_qr with qr_data as form data.
